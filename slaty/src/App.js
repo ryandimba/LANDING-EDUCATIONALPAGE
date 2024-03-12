@@ -11,8 +11,15 @@ import CreateIcon from '@mui/icons-material/Create';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import phone from './phone.jpg'
+import Button from '@mui/material/Button';
+
+
 
 function App() {
+  
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{ backgroundColor: '#424242' }}>
@@ -31,7 +38,7 @@ function App() {
           </Typography>
         </Toolbar>
       </AppBar>
-      <Box sx={{  padding: '20px 0' }}>
+      <Box sx={{ padding: '20px 0' }}>
         <Grid container spacing={3} justifyContent="center">
           <Grid item textAlign="center">
             <Card sx={{
@@ -53,9 +60,10 @@ function App() {
       <Box sx={{ padding: '20px 0' }}>
         <Grid container spacing={3} justifyContent="center">
           <Grid item textAlign="center">
-            <Card  sx={{
+            <Card sx={{
               width: { xs: 150, lg: 290 },
-              height: { xs: 140, lg: 150 }
+              height: { xs: 140, lg: 150 },
+              backgroundColor: '#B0F8F2'
             }}>
               <CardContent>
                 <Typography variant="h5" component="div">
@@ -70,7 +78,8 @@ function App() {
           <Grid item textAlign="center">
             <Card sx={{
               width: { xs: 150, lg: 290 },
-              height: { xs: 140, lg: 150 }
+              height: { xs: 140, lg: 150 },
+              backgroundColor: '#b3b3ff'
             }}>
               <CardContent>
                 <Typography variant="h5" component="div">
@@ -109,11 +118,44 @@ function App() {
           </Grid>
         </Grid>
       </Box>
-      <Box sx={{ backgroundColor: 'white',  padding: '20px 0', height:'200px' }}>
-        
+      <Box sx={{ backgroundColor: 'white', padding: '20px 0', }}>
+
+        <Grid container spacing={3} justifyContent="center">
+        <Grid item  md={6} textAlign="center">
+            <CardMedia
+              sx={{width: { xs: 180, lg: 'auto' },height: { xs: 'auto', lg: 150 },marginLeft:'10px',}}
+              component="img"
+              image={phone}
+              alt="phone
+                                "
+            />
+          </Grid>
+          <Grid item  md={6} textAlign="center">
+            <Grid item textAlign="center">
+              <Typography variant="h4" component="div" sx={{ color: '#00e6ac', marginTop: '10px',marginLeft:'20px', fontStyle: 'Verdana', fontSize: { xs: '12px', md: '14px', lg: '16px' } }}>
+                <b>We give access <br />to all you need to be <br />the best!</b>
+              </Typography>
+            </Grid>
+            <br />
+            
+
+              <Button sx={{
+                width: { xs: 180, lg: 320 },
+                height: { xs: 40, lg: 70 },
+                backgroundColor: '#DCE9E8 ',
+                borderRadius: '20px',
+                fontStyle: 'Verdana', fontSize: { xs: '12px', md: '8px', lg: '12px' } 
+              }} variant="contained"><Typography variant="h4" component="div" sx={{ color: '#FFFFFF', marginTop: '10px', fontStyle: 'Verdana', fontSize: { xs: '8px', md: '5px', lg: '16px' } }}> Enter yourEmail here..</Typography><Button variant="contained" sx={{  marginTop: '10px', marginBottom: '10px',fontStyle: 'Verdana', fontSize: { xs: '8px', md: '5px', lg: '12px' },borderRadius: '20px', }}>Submit</Button></Button>
+
+            
+
+
+          </Grid>
+        </Grid>
+
       </Box>
-      <Box sx={{ backgroundColor: '#DCE9E8 ',  padding: '20px 0',height:'20px' }}>
-        
+      <Box sx={{ backgroundColor: '#DCE9E8 ', padding: '20px 0', height: '20px' }}>
+
       </Box>
     </Box>
   );
